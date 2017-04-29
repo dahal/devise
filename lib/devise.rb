@@ -17,6 +17,10 @@ module Devise
   autoload :TimeInflector,      'devise/time_inflector'
   autoload :TokenGenerator,     'devise/token_generator'
 
+  def self.rails51?
+    Rails.version.start_with? '5.1'
+  end
+  
   module Controllers
     autoload :Helpers,        'devise/controllers/helpers'
     autoload :Rememberable,   'devise/controllers/rememberable'
